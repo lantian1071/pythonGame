@@ -1,0 +1,26 @@
+
+LISTENER_ORCL =
+  (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))
+
+gifthulu =
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = 192.168.102.155)(PORT = 1521))
+    )
+    (CONNECT_DATA =
+      (SERVICE_NAME = hldb)
+      (SERVER = DEDICATED)
+    )
+  )
+
+
+HPE =
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = 192.168.3.151)(PORT = 1521))
+    )
+    (CONNECT_DATA =
+      (SID = ahrodb)
+      (SERVER = DEDICATED)
+    )
+  )
