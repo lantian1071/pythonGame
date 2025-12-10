@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>围棋游戏 - 9x9</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>围棋游戏 (9x9)</h1>
+        
+        <div class="game-info">
+            <div class="player-info">
+                <span>玩家: <span id="player-stones">黑子</span></span>
+                <span>电脑: <span id="ai-stones">白子</span></span>
+            </div>
+            <div class="score-board">
+                <span>玩家领地: <span id="player-territory">0</span></span>
+                <span>电脑领地: <span id="ai-territory">0</span></span>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <label for="difficulty">难度:</label>
+            <select id="difficulty">
+                <option value="1">简单</option>
+                <option value="2" selected>中等</option>
+                <option value="3">困难</option>
+            </select>
+            
+            <button id="pass-btn">虚手</button>
+            <button id="reset-btn">重新开始</button>
+        </div>
+        
+        <div class="game-board-container">
+            <canvas id="gameBoard" width="450" height="450"></canvas>
+        </div>
+        
+        <div class="status">
+            <p id="status-message">轮到黑子下棋</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
