@@ -16,4 +16,11 @@ jobs:
       - run: npm i -g @cloudbase/cli
       - run: |
           tcb login --apiKeyId ${{ secrets.SECRETID }} --apiKey ${{ secrets.SECRETKEY }}
-          tcb hosting deploy ./shoot-the-fruit --envId ${{ secrets.ENVID }}
+          tcb container deploy \
+            --envId ${{ secrets.ENVID }} \
+            --serviceName mypyapp \
+            --sourceDir ./shoot-the-fruit \
+            --flowType IMAGE \
+            --port 80 \
+            --cpu 0.25 \
+            --mem 0.5
