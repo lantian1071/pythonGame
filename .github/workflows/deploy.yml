@@ -16,4 +16,4 @@ jobs:
       - run: npm i -g @cloudbase/cli
       - run: |
           tcb login --apiKeyId ${{ secrets.SECRETID }} --apiKey ${{ secrets.SECRETKEY }}
-          tcb hosting deploy ./dist --envId ${{ secrets.ENVID }}
+          tcb hosting deploy ./shoot-the-fruit --envId ${{ secrets.ENVID }}
