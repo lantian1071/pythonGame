@@ -2,7 +2,7 @@ name: 自动部署到腾讯云 CloudBase
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   workflow_dispatch:
 
 jobs:
